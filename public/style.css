@@ -1,0 +1,6 @@
+.user{
+  color: green;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
