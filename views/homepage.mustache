@@ -27,17 +27,18 @@
         <div class="msg">
           <h3><small>{{username}}</small>: {{title}}</h3>
           <blockquote>{{body}}</blockquote>
-          <small>Create at {{createAt}}</small>
+          <small>Created on {{createAt}}</small>
         </div>
         <div class="like">
           <form class="" action="/message/{{_id}}/like" method="post">
             <button type="submit" >Like!</button>
             <a href="/message/{{id}}/user">{{totalLikes}} Like</a>
           </form>
-          <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
-            <button type="submit" name="button">Delete</button>
-          </form>
+
         </div>
+        <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
+          <button type="submit" name="button">Delete Post</button>
+        </form>
       </div>
     {{/messages}}
   </body>
