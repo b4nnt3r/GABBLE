@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Gabble</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/images/gavicon.png" type="image/x-icon">
 
-  </head>
-  <body>
-    <div class="user_wrapper">
-      <div class="user">
-        <p id="greeting">Hello! {{user.username}}</p>
+<head>
+  <meta charset="utf-8">
+  <title>Gabble</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/images/gavicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="user_wrapper">
+    <div class="user">
+      <p id="greeting">Hello! {{user.username}}</p>
+    </div>
+    <div class="sign_out">
+      <form class="" action="/logout" method="post">
+        <input type="submit" name="" value="Sign out!">
+      </form>
+    </div>
+  </div>
+  <div class="post_msg">
+    <a href="/message/new">Post a message!</a>
+  </div>
+
+  {{#messages}}
+    <div class="user_msg">
+      <div class="msg">
+        <h3><small>{{username}}</small>: {{title}}</h3>
+        <blockquote>{{body}}</blockquote>
+        <small>Created on {{createAt}}</small>
       </div>
-      <div class="sign_out">
-        <form class="" action="/logout" method="post">
-          <input type="submit" name="" value="Sign out!">
+      <div class="like">
+        <form class="" action="/message/{{_id}}/like" method="post">
+          <button class="myButton" type="submit">✔</button>
+          <div class="tally">
+            <a href="/message/{{id}}/user">{{totalLikes}} Likes</a>
+          </div>
         </form>
       </div>
+      <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
+        <button class="deleteButton" type="submit" name="button">Delete Post</button>
+      </form>
     </div>
-    <div class="post_msg">
-      <a href="/message/new">Post a message!</a>
-    </div>
+  {{/messages}}
+</body>
 
-    {{#messages}}
-      <div class="user_msg">
-        <div class="msg">
-          <h3><small>{{username}}</small>: {{title}}</h3>
-          <blockquote>{{body}}</blockquote>
-          <small>Created on {{createAt}}</small>
-        </div>
-        <div class="like">
-          <form class="" action="/message/{{_id}}/like" method="post">
-            <button type="submit" >Like!</button>
-            <a href="/message/{{id}}/user">{{totalLikes}} Like</a>
-          </form>
-
-        </div>
-        <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
-          <button type="submit" name="button">Delete Post</button>
-        </form>
-      </div>
-    {{/messages}}
-  </body>
 </html>
