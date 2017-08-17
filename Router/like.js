@@ -5,6 +5,7 @@ const message = require("../models/Message")
 router.post("/message/:id/like", function(req, res){
   message.findOne({_id: req.params.id})
   .then(function(Like){
+
     if (Like.user_like.length == 0){
       console.log("First Like");
       Like.user_like.push({
@@ -17,6 +18,7 @@ router.post("/message/:id/like", function(req, res){
       })
     }else{
       let like_existed = true;
+
       for (var i = 0; i < Like.user_like.length; i++) {
         console.log(Like.user_like[i].username);
         if (Like.user_like[i].username === req.user.username){

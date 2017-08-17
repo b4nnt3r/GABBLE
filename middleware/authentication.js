@@ -4,6 +4,7 @@ module.exports = function(req, res, next){
     User.findOne({_id: req.session.userId})
     .then(function(user){
       req.user = user;
+      req.user = user;  //?
       next()
     })
   }else{

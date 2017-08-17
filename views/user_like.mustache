@@ -7,15 +7,16 @@
   </head>
   <body>
     {{#users_like}}
-      <div class="">
+      <div>
         Liked by: {{.}}
       </div>
     {{/users_like}}
     {{^users_like}}
-    <div class="">
+    <div>
       Noone likes what you said...
     </div>
     {{/users_like}}
   </body>
   <a href="/">Home</a>
+
 </html>
