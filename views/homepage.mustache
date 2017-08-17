@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Gabble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="head">
+      <div class="user">
+        <p id="greeting">Hello! {{user.username}}</p>
+      </div>
+      <div class="sign_out">
+        <form class="" action="/logout" method="post">
+          <input type="submit" name="" value="Sign out!">
+        </form>
+      </div>
+    </div>
+    <div class="post_msg">
+      <a href="/message/new">Post a message!</a>
+    </div>
+
+    {{#messages}}
+      <div class="user_msg">
+        <div class="msg">
+          <h3><small>{{username}}</small>: {{title}}</h3>
+          <blockquote>{{body}}</blockquote>
+          <small>Create at {{createAt}}</small>
+        </div>
+        <div class="like">
+          <form class="" action="/message/{{_id}}/like" method="post">
+            <button type="submit" >Like!</button>
+            <a href="/message/{{id}}/user">{{totalLikes}} Like</a>
+          </form>
+          <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
+            <button type="submit" name="button">Delete</button>
+          </form>
+        </div>
+      </div>
+    {{/messages}}
+  </body>
+</html>
