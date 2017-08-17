@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabble Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="body_sign_up">
+    <div class="header_sign_up login_header">
+      <h3 id="header_content">Gabble away!</h3>
+    </div>
+    {{#error_message}}
+      <div>Password doesn't match confirmation</div>
+    {{/error_message}}
+    {{#user_exist}}
+      <div class="">User already exist</div>
+    {{/user_exist}}
+    <form class="sign_up" action="/register" method="post">
+      <div>
+        {{#error.errors.username}}
+          <div>username required</div>
+        {{/error.errors.username}}
+        <label for="">New Username</label>
+        <input type="text" name="username" value="">
+      </div>
+      <div>
+        {{#error.errors.password}}
+          <div>password required</div>
+        {{/error.errors.password}}
+        <label for="">New Password</label>
+        <input type="password" name="password" value="">
+        </br>
+        <label for="">Confirm Password</label>
+        <input type="password" name="confirm" value="">
+      </div>
+      <input id="sign_up_submit" type="submit" name="" value="Sign up!">
+    </form>
+    <div class="">
+        <small><a href="/login">Login page</a></small>
+    </div>
+  </body>
+</html>

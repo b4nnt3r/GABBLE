@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabble Post Likes</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    {{#users_like}}
+      <div class="">
+        Liked by: {{.}}
+      </div>
+    {{/users_like}}
+    {{^users_like}}
+    <div class="">
+      Noone likes what you said...
+    </div>
+    {{/users_like}}
+  </body>
+  <a href="/">Home</a>
+</html>
