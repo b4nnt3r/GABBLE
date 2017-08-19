@@ -11,12 +11,13 @@
 <body>
   <div class="user_wrapper">
     <div class="user">
-      <p id="greeting">Hello! {{user.username}}</p>
-    </div>
-    <div class="sign_out">
-      <form class="" action="/logout" method="post">
-        <input type="submit" name="" value="Sign out!">
-      </form>
+      <p id="greeting">Hello! {{user.username}}
+        <div class="sign_out">
+          <form class="" action="/logout" method="post">
+            <input type="submit" name="" value="Sign out!">
+          </form>
+      </p>
+      </div>
     </div>
   </div>
   <div class="post_msg">
@@ -29,7 +30,7 @@
         <h3><small>{{username}}</small>: {{title}}</h3>
         <blockquote>{{body}}</blockquote>
         <small>Created on {{createAt}}</small>
-      </div>
+
       <div class="like">
         <form class="" action="/message/{{_id}}/like" method="post">
           <button class="myButton" type="submit">✔</button>
@@ -38,6 +39,9 @@
           </div>
         </form>
       </div>
+
+</div>
+
       <form class="delete_msg" action="/message/{{_id}}/delete" method="post">
         <button class="deleteButton" type="submit" name="button">Delete Post</button>
       </form>
