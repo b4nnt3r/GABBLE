@@ -1,0 +1,136 @@
+.user_wrapper {
+  width: 100%;
+  margin: 0;
+
+}
+
+.user {
+  color: white;
+  background-color: cadetblue;
+  padding: 20px;
+  width: 100%;
+  margin-left: -10px;
+  margin-top: -10px
+
+}
+
+.user_msg {
+  background-color: lightslategrey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.user_msg:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+form {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.like{
+  margin: 5px 20px;
+}
+
+#greeting {
+  display: flex;
+  justify-content: center;
+}
+.myButton {
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color: cadetblue;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+
+}
+
+.deleteButton {
+	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+	background-color:#c62d1f;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.deleteButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, orange 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, orange 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, orange 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, orange 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, orange 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
+	background-color: orange;
+}
+.deleteButton:active {
+	position:relative;
+	top:1px;
+}
+
+.delete_msg {
+  padding-left: 120px;
+  padding-top: 150px;
+}
+a {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+
+.tally {
+	display: inline-block;
+  text-decoration: none;
+  color: #fff;
+	padding-bottom: 3px;
+}
+.tally:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.tally:hover:after {
+	width: 100%;
+	background: cadetblue;
+}
